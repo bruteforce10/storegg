@@ -6,7 +6,7 @@ import React from "react";
 export default function Overview() {
   return (
     <section className="overview overflow-auto">
-      <SideBar />
+      <SideBar activeMenu={"overview"} />
       <OverviewContent />
     </section>
   );

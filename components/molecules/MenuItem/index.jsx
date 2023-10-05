@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import cx from "classnames";
+import Link from "next/link";
 
-export default function MenuItem({ title, icon, active }) {
+export default function MenuItem({ title, icon, active, href }) {
   const classItem = cx({
     item: true,
     "mb-30": true,
@@ -14,9 +15,9 @@ export default function MenuItem({ title, icon, active }) {
         <Image src={`/icon/${icon}.svg`} width={25} height={25} alt="" />
       </div>
       <p className="item-title m-0">
-        <a href="" className="text-lg text-decoration-none">
+        <Link className="text-lg text-decoration-none" href={href}>
           {title}
-        </a>
+        </Link>
       </p>
     </div>
   );
